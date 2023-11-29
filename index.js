@@ -45,7 +45,7 @@ app.put('/users/:id', checkUserId, (request, response) => {
 
     return response.json(updatedUser)
 })
-app.delete('/users', (request, response) => {
+app.delete('/users/:id', (request, response) => {
     const index = request.userIndex
     users.splice(index, 1)
     return response.status(204).json()
